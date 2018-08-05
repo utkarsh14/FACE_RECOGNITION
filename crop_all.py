@@ -9,7 +9,6 @@ def facecrop(image,j):
     i=0
     for f in faces:
        x, y, w, h = [ v for v in f ]
-       cv2.rectangle(img, (x,y), (x+w,y+h), (255,255,255))
        sub_face = img[y:y+h, x:x+w]
        fname,ext= os.path.splitext(image)
        i=i+1
